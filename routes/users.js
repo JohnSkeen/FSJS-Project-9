@@ -1,5 +1,4 @@
 const express = require('express');
-const morgan = require('morgan');
 const router = express.Router();
 const { sequelize, models } = require('../db');
 const { User, Course } = models;
@@ -77,7 +76,6 @@ router.post('/', (req, res, next) => {
           });
       }
     });
-
   };
 });
 
