@@ -44,6 +44,10 @@ module.exports = (req, res, next) => {
             res.status(401);
             res.json({message: message});
           }
+        } else {
+          message = `User name is not found`;
+          res.status(404);
+          res.json({message: message});
         }
       });
   } else {
